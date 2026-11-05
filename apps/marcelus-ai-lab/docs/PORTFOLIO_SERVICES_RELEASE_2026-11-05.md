@@ -14,7 +14,7 @@ The legal notice's description of the website is aligned with enquiries and proj
 
 ## Presentation and search
 
-Service cards use restrained blue, violet, teal and warm accents, icon surfaces and small hover movements. The whole card is one accessible link. Reduced-motion behavior is retained. At the owner’s request, the final release uses light surfaces only, including pastel blue action buttons. The theme switch is removed; stored dark preferences are ignored without deleting browser data. Privacy/cookie descriptions reflect that change.
+Service cards use HP-inspired pale blue panels, blue borders, white icon surfaces and clear light-blue action pills, with small hover and press effects. The whole card is one accessible link. Reduced-motion behavior is retained. At the owner’s request, the final release uses light surfaces only, including pastel blue action buttons. The theme switch is removed; stored dark preferences are ignored without deleting browser data. Privacy/cookie descriptions reflect that change.
 
 Metadata describes the actual page in each language, including services, contact, projects and legal documents. Canonicals and language alternates retain the `/marcelus/` base path. Visible breadcrumbs and matching BreadcrumbList data are added to services, contact and project details. Person and WebSite data identify the portfolio without claiming an organization, ratings, prices or search functionality.
 
