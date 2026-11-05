@@ -45,4 +45,4 @@ NOTE
 Clear instructions make review easier but do not guarantee accuracy. Do not submit confidential information without authorization.
 
 Free, editable template. MARCELUS AI LAB
-https://manzo8b.github.io/marcelus-v-v01/resources/
+https://manzo8b.github.io/marcelus/resources/

@@ -38,7 +38,7 @@ test('new metadata uses project social cards, a base-aware icon and no contact d
   for (const locale of locales) {
     const metadata = pageMetadata('/projects/verum/', locale, 'VERUM');
     assert.match(metadata.openGraph.images[0].url, /\/media\/og-verum.png$/);
-    assert.match(metadata.icons.icon[0].url, /\/icon.svg$/);
+    assert.match(metadata.icons.icon[0].url, /\/favicon-32.png$/);
     assert.doesNotMatch(JSON.stringify(metadata), /mailto:|telephone|email/i);
     assert.match(pageMetadata('/library/', locale).description, /[a-zA-Z]/);
   }

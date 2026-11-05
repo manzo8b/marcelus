@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Real Chromium smoke QA: published route structure, colored hierarchy, dark/mobile.
-Run against exported Next.js site mounted at /marcelus-v-v01/."""
+Run against exported Next.js site mounted at /marcelus/."""
 from playwright.sync_api import sync_playwright
 
-BASE = "http://127.0.0.1:8765/marcelus-v-v01"
+BASE = "http://127.0.0.1:8765/marcelus"
 ROUTES = [
     "/", "/it/", "/es/",
     "/it/projects/", "/it/resources/", "/it/lab/",

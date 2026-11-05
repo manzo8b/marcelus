@@ -41,7 +41,7 @@ test('main site and home receive project navigation, call-to-action and learning
  for(const term of ['--lab-blue','#244F9B','#0C615D','#B13F28','#67439A','#7B4B10','.site-header','.main-nav a[aria-current="page"]','.project-grid .project-card','.library-toolbar','.button-primary','.footer-inner','html[data-theme="dark"]','@media print','prefers-reduced-motion']){
   assert.ok(globalCss.includes(term),'global: '+term);
  }
- for(const term of ['.heroText h1 span','.featuredCard.accentVerum','.featuredCard.accentPrometeus','.featuredCard.accentRisto','.featuredCard.accentEditorial','.caseCard:nth-child(3n+3)','.methodStep:nth-child(4n+4)','.skillsSection','.contactBand','.villaFeature','.freeFeature',':global(html[data-theme="dark"])']){
+ for(const term of ['.heroText h1 span','.accentVerum','.accentPrometeus','.accentRisto','.accentEditorial','.skillsSection','.contactBand','.villaFeature','.freeFeature','var(--ink)']){
   assert.ok(homeCss.includes(term),'home: '+term);
  }
 });

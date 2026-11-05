@@ -1,6 +1,6 @@
 import { factCheckSource } from './fact-check.ts';
 export const sourceCommit = 'f108170a748e161ba26dd148421ddd8ad9ee929f';
-export const repository = 'https://github.com/manzo8b/marcelus-v-v01';
+export const repository = 'https://github.com/manzo8b/marcelus';
 export const profile = {
   name: 'Marcelo Fernandez',
   role: 'Training & AI Workflow Projects',

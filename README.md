@@ -1,7 +1,7 @@
 # MARCELUS AI LAB
 ### Marcelo Fernandez · AI Evaluation · Instruction Design · Training Workflows
 
-**[Explore the portfolio](https://manzo8b.github.io/marcelus-v-v01/it/)** · **[Recruiter overview](https://manzo8b.github.io/marcelus-v-v01/it/recruiter/)** · [English](https://manzo8b.github.io/marcelus-v-v01/) · [Español](https://manzo8b.github.io/marcelus-v-v01/es/)
+**[Explore the portfolio](https://manzo8b.github.io/marcelus/it/)** · **[Recruiter overview](https://manzo8b.github.io/marcelus/it/recruiter/)** · [English](https://manzo8b.github.io/marcelus/) · [Español](https://manzo8b.github.io/marcelus/es/)
 
 I design and document practical AI-assisted workflows, drawing on professional experience in hospitality operations and vocational training. My work focuses on **clear instructions, evidence-based evaluation, and usable training tools**.
 
@@ -11,7 +11,7 @@ I design and document practical AI-assisted workflows, drawing on professional e
 
 | Project | What it addresses | Start here |
 | --- | --- | --- |
-| **VERUM · Fact-checking** | Checking claims, sources, comparisons and uncertainty | [Documented case study](https://manzo8b.github.io/marcelus-v-v01/it/cases/fact-check-renewables/) |
+| **VERUM · Fact-checking** | Checking claims, sources, comparisons and uncertainty | [Documented case study](https://manzo8b.github.io/marcelus/it/cases/fact-check-renewables/) |
 | **Prometeus Marcelus** | Turning vague requests into structured, testable instructions | [Rubric design case](AI_EVALUATION_PORTFOLIO/CASE_02_PROMETEUS_RUBRIC_DESIGN.md) |
 | **RISTO-LAB · Hospitality training** | Translating hospitality operations into instructional resources and workflows | [Training and language-quality case](AI_EVALUATION_PORTFOLIO/CASE_03_LANGUAGE_QUALITY.md) |
 
@@ -47,7 +47,7 @@ Experience in food & beverage operations, team coordination and professional tra
 
 **Languages:** Spanish (native), Italian (professional use; CELI B1 certified), English (self-reported B1, not certified).
 
-**Contact:** [LinkedIn](https://www.linkedin.com/in/marcelo-fernandez-cab/) · [Portfolio](https://manzo8b.github.io/marcelus-v-v01/it/)
+**Contact:** [LinkedIn](https://www.linkedin.com/in/marcelo-fernandez-cab/) · [Portfolio](https://manzo8b.github.io/marcelus/it/)
 
 ## Historical documentation
 
