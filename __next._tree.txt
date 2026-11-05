@@ -1,6 +1,6 @@
 :HL["/marcelus/_next/static/chunks/3xwtq4xd6mejn.css","style"]
 :HL["/marcelus/_next/static/chunks/06kq6g6vncmrd.css","style"]
-:HL["/marcelus/_next/static/chunks/1iz0uze8c0rui.css","style"]
+:HL["/marcelus/_next/static/chunks/33cq2rd9vltqq.css","style"]
 2:[["children",{"s":"__PAGE__","h":128}]]
 1:[["children",{"s":"(english)","h":48,"c":"$Q2"}]]
-0:{"b":"sfIFehmJ8lEyZgU2vNxRh","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"WEsp-NttwAuRBhIqOk9zd","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
