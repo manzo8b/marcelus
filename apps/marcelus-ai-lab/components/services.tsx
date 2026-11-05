@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, BookOpen, GraduationCap, Globe2, Mail, ScanSearch, Workflow } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen, GraduationCap, Globe2, Mail, Check, ScanSearch, Workflow } from 'lucide-react';
 import { type Locale, localizedPath } from '@/data/i18n';
 import { presentation, projectEmail } from '@/data/presentation';
 import { profile } from '@/data/portfolio';
 import { Breadcrumbs } from './breadcrumbs';
+import style from './services-page.module.css';
 
 export const serviceIcons = {web:Globe2,instructions:Workflow,review:ScanSearch,training:GraduationCap};
 
@@ -20,18 +21,41 @@ export function ServiceCards({locale}:{locale:Locale}) {
 
 export function ServicesPage({locale='en'}:{locale?:Locale}) {
   const c=presentation[locale];
-  return <article className="offer-page">
+  return <article className={`offer-page ${style.page}`}>
     <Breadcrumbs locale={locale} items={[{name:c.nav.services,path:'/services/'}]}/>
-    <header className="page-heading"><p className="eyebrow">{profile.name} · {c.nav.services}</p><h1>{c.servicesPageTitle}</h1><p className="lead">{c.servicesPageIntro}</p></header>
-    <nav className="offer-index" aria-label={c.nav.services}>{c.services.map(s=><a href={`#${s.id}`} key={s.id}>{s.title}<ArrowRight size={14} aria-hidden="true"/></a>)}</nav>
-    <div className="offer-details">{c.services.map(service=>{
+    <header className={style.hero}>
+      <div className={style.heroCopy}>
+        <p className={style.eyebrow}>{profile.name} · {c.nav.services}</p>
+        <h1>{c.servicesPageTitle}</h1><p className={style.lead}>{c.servicesPageIntro}</p>
+        <div className={style.heroActions}>
+          <Link className={`${style.button} ${style.primary}`} href={localizedPath('/contact/',locale)}>{c.nav.contact}<ArrowRight size={17} aria-hidden="true"/></Link>
+          <a className={`${style.button} ${style.secondary}`} href="#service-details">{c.allServices}<ArrowRight size={17} aria-hidden="true"/></a>
+        </div>
+      </div>
+      <nav className={style.directory} aria-label={c.nav.services}>{c.services.map(service=>{
+        const Icon=serviceIcons[service.id];
+        return <a href={`#${service.id}`} key={service.id}><span className={style.directoryIcon}><Icon size={25} strokeWidth={1.6} aria-hidden="true"/></span><span>{service.title}</span><ArrowUpRight className={style.directoryArrow} size={18} aria-hidden="true"/></a>;
+      })}</nav>
+    </header>
+    <div id="service-details" className={style.details}>{c.services.map(service=>{
       const Icon=serviceIcons[service.id];
-      return <section className="offer-detail" key={service.id} id={service.id} aria-labelledby={`service-${service.id}`}>
-        <div><Icon size={32} strokeWidth={1.4} aria-hidden="true"/><h2 id={`service-${service.id}`}>{service.title}</h2><p className="offer-short">{service.short}</p><h3>{c.audience}</h3><p>{service.audience}</p></div>
-        <div><h3>{c.delivery}</h3><ul>{service.delivery.map(item=><li key={item}>{item}</li>)}</ul><p className="offer-scope"><strong>{c.scope}.</strong> {service.scope}</p><Link className="text-link" href={localizedPath(service.path,locale)}>{c.proof}: {service.proof}<ArrowUpRight size={15} aria-hidden="true"/></Link></div>
+      return <section className={style.panel} data-service-panel={service.id} key={service.id} id={service.id} aria-labelledby={`service-${service.id}`}>
+        <div className={style.intro}>
+          <span className={style.badge}><Icon size={36} strokeWidth={1.4} aria-hidden="true"/></span>
+          <h2 id={`service-${service.id}`}>{service.title}</h2><p className={style.short}>{service.short}</p>
+          <div className={style.audience}><h3>{c.audience}</h3><p>{service.audience}</p></div>
+        </div>
+        <div className={style.delivery}>
+          <h3>{c.delivery}</h3><ul>{service.delivery.map(item=><li key={item}><span><Check size={17} strokeWidth={2} aria-hidden="true"/></span>{item}</li>)}</ul>
+          <Link className={style.example} href={localizedPath(service.path,locale)}><span><small>{c.proof}</small><strong>{service.proof}</strong></span><ArrowUpRight size={21} aria-hidden="true"/></Link>
+        </div>
+        <footer className={style.panelFooter}>
+          <Link className={`${style.button} ${style.primary}`} href={localizedPath('/contact/',locale)}>{c.nav.contact}<ArrowRight size={17} aria-hidden="true"/></Link>
+          <p><strong>{c.scope}.</strong> {service.scope}</p>
+        </footer>
       </section>;
     })}</div>
-    <ProjectContact locale={locale}/>
+    <div className={style.closing}><ProjectContact locale={locale}/></div>
   </article>;
 }
 
