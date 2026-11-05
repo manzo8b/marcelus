@@ -12,7 +12,7 @@ export default async function RecruiterPage({ params }: LocalizedProps) {
     ['Who I am', 'Operations, team coordination and professional training.'],
     ['What I can do', 'Compare claims, assess evidence, explain errors and document a correction.'],
     ['Core skills', 'Instruction design, evaluation rubrics, audience adaptation and process documentation.'],
-    ['Proof of work', 'Three personal projects, annotated synthetic cases and historical reports with explicit limits.'],
+    ['Proof of work', 'Three selected AI and training projects, annotated synthetic cases and historical reports with explicit limits.'],
     ['Work setup', 'Based in Italy. Remote collaboration; project availability and contract terms to be agreed.'],
   ];
   return <><PageHeading locale={locale} label="60 second overview" title={profile.name} description={profile.role} />

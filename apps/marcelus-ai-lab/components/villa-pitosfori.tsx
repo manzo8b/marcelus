@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight, Globe2, ExternalLink, Mail } from 'lucide-react';
 import { type Locale, localizedPath } from '@/data/i18n';
@@ -55,12 +56,18 @@ const content = {
   }
 } as const;
 
+const contribution = {
+  it: {title:'Il mio contributo',items:[['L’esigenza','Presentare una villa nel Salento con informazioni ordinate e percorsi semplici per chi cerca un soggiorno.'],['Il lavoro','Struttura e rifinitura dell’esperienza web su Wix, con sviluppo assistito da AI e verifiche delle pagine.'],['Gli interventi','Menu e footer più essenziali, gerarchia delle informazioni, layout desktop e mobile e metadati di base.'],['Cosa puoi vedere','Il sito pubblicato: puoi esplorare la navigazione, le pagine della villa e i collegamenti per chiedere informazioni.']]},
+  en: {title:'My contribution',items:[['The need','Present a villa in Salento with well-organized information and clear paths for people planning a stay.'],['The work','Structure and refinement of the Wix website experience, with AI-assisted development and page checks.'],['The changes','A more focused menu and footer, information hierarchy, desktop and mobile layouts and essential metadata.'],['What you can explore','The published website: its navigation, property pages and links for accommodation enquiries.']]},
+  es: {title:'Mi aportación',items:[['La necesidad','Presentar una villa en Salento con información ordenada y recorridos claros para quien busca alojamiento.'],['El trabajo','Estructura y mejora de la experiencia web en Wix, con desarrollo asistido por IA y revisión de las páginas.'],['Los cambios','Menú y pie de página más concisos, jerarquía de información, diseño móvil y de escritorio y metadatos básicos.'],['Qué puedes explorar','El sitio publicado: su navegación, las páginas del alojamiento y los enlaces para solicitar información.']]}
+} as const;
+
 const site = 'https://www.villapitosfori.com/';
 
 export function VillaPitosforiOverview({ locale='en' }: { locale?: Locale }) {
   const c=content[locale];
   return <article className={s.root}>
-    <Link href={localizedPath('/projects/',locale)} className={s.back}><ArrowLeft size={16} aria-hidden="true" />{c.back}</Link>
+    <Breadcrumbs locale={locale} items={[{name:c.back,path:'/projects/'},{name:c.title,path:'/projects/villa-pitosfori/'}]}/>
     <div className={s.hero}>
       <span className={s.label}><Globe2 size={17} aria-hidden="true" />{c.label}</span>
       <h1>{c.title}</h1>
@@ -68,6 +75,7 @@ export function VillaPitosforiOverview({ locale='en' }: { locale?: Locale }) {
       <p className={s.lead}>{c.intro}</p>
       <a href={site} target="_blank" rel="noreferrer" className={s.action}>{c.action}<ExternalLink size={17} aria-hidden="true"/></a>
     </div>
+    <section className="villa-contribution" aria-labelledby="villa-contribution"><h2 id="villa-contribution">{contribution[locale].title}</h2><dl>{contribution[locale].items.map(([label,text])=><div key={label}><dt>{label}</dt><dd>{text}</dd></div>)}</dl></section>
     <div className={s.twoColumns}>
       <section><h2>{c.scopeTitle}</h2><p>{c.scope}</p></section>
       <section><h2>{c.accuracyTitle}</h2><p>{c.accuracy}</p></section>

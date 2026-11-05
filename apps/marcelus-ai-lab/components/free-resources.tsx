@@ -3,6 +3,7 @@ import { ArrowLeft, Download, FileSpreadsheet, FileText, ShieldCheck, Workflow }
 import { assetUrl } from '@/data/portfolio';
 import { type Locale, localizedPath } from '@/data/i18n';
 import s from './free-resources.module.css';
+import { ResourceLinks } from './services';
 
 const copy = {
   en: {
@@ -61,6 +62,7 @@ export function FreeResources({ locale = 'en' }: { locale?: Locale }) {
       <p className={s.lead}>{c.intro}</p>
       <p className={s.available}>{c.available}</p>
     </div>
+    <ResourceLinks locale={locale}/>
     <section className={s.grid} aria-label={c.title}>
       {c.data.map(([title, desc, format, slug], index) => {
         const ext = index === 2 ? 'csv' : 'txt';

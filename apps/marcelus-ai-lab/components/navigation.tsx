@@ -3,14 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-react';
-import { assetUrl, repository, profile } from '@/data/portfolio';
+import { Menu, Moon, Sun, X } from 'lucide-react';
+import { assetUrl, profile } from '@/data/portfolio';
 import { type Locale, localizedPath, unlocalizedPath, t } from '@/data/i18n';
+import { presentation } from '@/data/presentation';
 
-const links = [['/', 'Overview'], ['/projects/', 'Projects'], ['/#skills', 'Skill'], ['/resources/', 'Free resources'], ['/lab/', 'Evaluation lab'], ['/library/', 'Library']];
+const links = [['/', 'home'], ['/services/', 'services'], ['/projects/', 'projects'], ['/about/', 'about'], ['/resources/', 'resources']] as const;
 
 export function Navigation({ locale }: { locale: Locale }) {
   const path = usePathname();
+  const c = presentation[locale];
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -38,14 +40,10 @@ export function Navigation({ locale }: { locale: Locale }) {
   function active(href: string) { const clean = unlocalizedPath(path); return href === '/' ? clean === '/' : clean.startsWith(href.replace(/\/$/, '')); }
   return <header className="site-header">
     <div className="header-inner">
-      <Link href={localizedPath('/', locale)} className="brand" aria-label="Marcelus AI Lab"><img className="brand-symbol" src={assetUrl('/media/manzo-mark.svg')} alt="" aria-hidden="true" width={35} height={34} /><span>MARCELUS <span className="brand-detail">AI LAB</span></span></Link>
+      <Link href={localizedPath('/', locale)} className="brand" aria-label="Marcelus — Marcelo Fernandez"><img className="brand-symbol" src={assetUrl('/media/manzo-mark.svg')} alt="" aria-hidden="true" width={35} height={34} /><span>MARCELUS <span className="brand-detail">{profile.name}</span></span></Link>
       <nav id="main-navigation" aria-label={t(locale, 'Main navigation')} className={`main-nav ${open ? 'is-open' : ''}`}>
-        {links.map(([href, label]) => {
-          const anchor = href === '/#skills';
-          const url = anchor ? `${localizedPath('/', locale)}#skills` : localizedPath(href, locale);
-          return <Link key={href} href={url} aria-current={!anchor && active(href) ? 'page' : undefined} onClick={() => setOpen(false)}>{anchor ? 'Skill' : t(locale, label)}</Link>;
-        })}
-        <a href={repository} target="_blank" rel="noreferrer">GitHub<ArrowUpRight size={14} /></a>
+        {links.map(([href, label]) => <Link key={href} href={localizedPath(href, locale)} aria-current={active(href) ? 'page' : undefined} onClick={() => setOpen(false)}>{c.nav[label]}</Link>)}
+        <Link className="nav-enquiry" href={localizedPath('/contact/',locale)} aria-current={active('/contact/')?'page':undefined} onClick={()=>setOpen(false)}>{c.nav.contact}</Link>
       </nav>
       <div className="header-tools">
         <label className="language-control"><span className="sr-only">{t(locale, 'Language')}</span><select aria-label={t(locale, 'Language')} value={locale} onChange={event => {

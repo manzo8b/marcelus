@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import Link from 'next/link';
 import { ArrowLeft, BookOpenCheck, CircleAlert, Newspaper } from 'lucide-react';
 import { type Locale, localizedPath } from '@/data/i18n';
@@ -50,7 +51,7 @@ const content = {
 export function SComodoOverview({ locale = 'en' }: { locale?: Locale }) {
   const c = content[locale];
   return <article className="project-detail" style={{maxWidth:'960px'}}>
-    <Link href={localizedPath('/projects/',locale)} className="breadcrumb"><ArrowLeft size={16} aria-hidden="true"/>{c.back}</Link>
+    <Breadcrumbs locale={locale} items={[{name:c.back,path:'/projects/'},{name:c.title,path:'/projects/s-comodo/'}]}/>
     <div className="project-title"><Newspaper size={25} aria-hidden="true"/><p className="eyebrow">{c.label}</p></div>
     <h1>{c.title}</h1>
     <p className="lead">{c.intro}</p>

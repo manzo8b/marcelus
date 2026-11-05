@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import Link from 'next/link';
 import { type Locale, localizedPath, t } from '@/data/i18n';
 import { notFound } from 'next/navigation';
@@ -29,7 +30,7 @@ export default async function ProjectPage({ params }: Props) {
   const after = getSample(detail.example.afterId);
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
   return <article className={`project-detail project-${project.id}`}>
-    <Link href={localizedPath('/projects/', locale)} className="breadcrumb"><ArrowLeft size={14} />{tr('All projects')}</Link>
+    <Breadcrumbs locale={locale} items={[{name:tr('Projects'),path:'/projects/'},{name:project.name,path:`/projects/${project.id}/`}]}/>
     <div className="project-title"><span className="project-icon"><Icon size={27} /></span><p className="eyebrow">{tr(project.subtitle)}</p></div>
     <h1>{project.name}</h1><p className="lead">{tr(project.description)}</p>
     {project.id === 'prometeus' && <div className="document-links"><Link className="text-link" href={localizedPath('/library/', locale)}>{tr('Explore the prompt library')}<ArrowRight size={17} /></Link></div>}

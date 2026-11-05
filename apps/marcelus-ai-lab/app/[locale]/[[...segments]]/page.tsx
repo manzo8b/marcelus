@@ -15,8 +15,10 @@ import { LegalPage, type LegalKind } from '@/components/legal-pages';
 import { caseStudies, projects, profile } from '@/data/portfolio';
 import { type Locale, t } from '@/data/i18n';
 import { pageMetadata } from '@/data/site-metadata';
+import { ServicesPage, ContactPage } from '@/components/services';
+import { presentation } from '@/data/presentation';
 
-const routes = ['', 'projects', 'projects/s-comodo', 'projects/villa-pitosfori', 'resources', ...projects.map(item => `projects/${item.id}`), 'lab', 'library', 'cases', ...caseStudies.map(item => `cases/${item.id}`), 'about', 'recruiter', 'legal', 'legal/privacy', 'legal/cookies'];
+const routes = ['', 'services', 'contact', 'projects', 'projects/s-comodo', 'projects/villa-pitosfori', 'resources', ...projects.map(item => `projects/${item.id}`), 'lab', 'library', 'cases', ...caseStudies.map(item => `cases/${item.id}`), 'about', 'recruiter', 'legal', 'legal/privacy', 'legal/cookies'];
 export const dynamicParams = false;
 export function generateStaticParams() { return ['it', 'es'].flatMap(locale => routes.map(route => ({ locale, segments: route ? route.split('/') : [] }))); }
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
@@ -25,6 +27,13 @@ export async function generateMetadata({ params }: Props) {
   const { locale, segments = [] } = await params;
   if (locale !== 'it' && locale !== 'es') return {};
   const route = segments.join('/');
+  if (route === '' || route === 'about' || route === 'services' || route === 'contact') {
+    const c=presentation[locale];
+    const title=route===''?`${profile.name} — ${locale==='it'?'Siti web, AI e formazione':'Sitios web, IA y formación'}`:route==='about'?`${c.nav.about} — ${profile.name}`:c.nav[route];
+    const description=route==='services'?c.servicesPageIntro:route==='contact'?c.contactPageIntro:route==='about'?c.aboutText:c.homeDescription;
+    return pageMetadata(route?`/${route}/`:'/',locale,title,description);
+  }
+  if (route === 'projects') return pageMetadata('/projects/',locale,`${presentation[locale].nav.projects} — ${profile.name}`,locale==='it'?'Siti web, istruzioni AI e formazione pratica: esplora lavori pubblicati e progetti documentati di Marcelo Fernandez.':'Sitios web, instrucciones de IA y formación práctica: explora trabajos publicados y proyectos documentados de Marcelo Fernandez.');
   if (route === 'resources') {
     return pageMetadata('/resources/', locale, locale === 'it' ? 'Risorse gratuite' : 'Recursos gratuitos', locale === 'it' ? 'Checklist e modelli gratuiti per risposte AI, istruzioni più chiare e lezioni. Download diretto senza registrazione.' : 'Plantillas gratuitas para revisar respuestas de IA, escribir instrucciones y planificar clases. Descarga directa sin registro.');
   }
@@ -60,6 +69,8 @@ export default async function LocalizedPage({ params }: Props) {
   if (!routes.includes(route)) notFound();
   const pageParams = Promise.resolve<{ locale: Locale }>({ locale });
   if (route === '') return <Home params={pageParams} />;
+  if (route === 'services') return <ServicesPage locale={locale}/>;
+  if (route === 'contact') return <ContactPage locale={locale}/>;
   if (route === 'projects') return <Projects params={pageParams} />;
   if (route === 'projects/s-comodo') return <SComodoOverview locale={locale} />;
   if (route === 'projects/villa-pitosfori') return <VillaPitosforiOverview locale={locale} />;

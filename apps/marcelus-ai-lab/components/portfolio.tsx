@@ -11,9 +11,9 @@ export function ProjectGrid({ locale = 'en', evaluationFirst = false }: { locale
     <Link href={localizedPath('/projects/s-comodo/', locale)} className="project-card project-s-comodo">
       <div className="project-card-top"><span className="project-icon"><Newspaper size={23} strokeWidth={1.6} aria-hidden="true" /></span><ArrowUpRight className="project-arrow" size={20} aria-hidden="true" /></div>
       <h3>S-COMODO</h3>
-      <p className="project-domain">{locale === 'it' ? 'Editoria indipendente · In preparazione' : locale === 'es' ? 'Editorial independiente · En preparación' : 'Independent editorial · In preparation'}</p>
+      <p className="project-domain">{locale === 'it' ? 'Editoria indipendente · Online' : locale === 'es' ? 'Editorial independiente · En línea' : 'Independent editorial · Online'}</p>
       <p className="project-description">{locale === 'it' ? 'Attualità, contesto storico e fonti, con uso dichiarato dell’AI e revisione editoriale umana.' : locale === 'es' ? 'Actualidad, contexto histórico y fuentes, con uso transparente de IA y revisión editorial humana.' : 'Current events, historical context and sources, with transparent AI assistance and human editorial review.'}</p>
-      <div className="project-skills"><span>{locale === 'it' ? 'Progetto in preparazione' : locale === 'es' ? 'Proyecto en preparación' : 'Project in preparation'}</span></div>
+      <div className="project-skills"><span>{locale === 'it' ? 'Sito editoriale pubblicato' : locale === 'es' ? 'Sitio editorial publicado' : 'Published editorial website'}</span></div>
     </Link>
     <Link href={localizedPath('/projects/villa-pitosfori/', locale)} className="project-card project-villa-pitosfori">
       <div className="project-card-top"><span className="project-icon"><Globe2 size={23} strokeWidth={1.6} aria-hidden="true" /></span><ArrowUpRight className="project-arrow" size={20} aria-hidden="true" /></div>

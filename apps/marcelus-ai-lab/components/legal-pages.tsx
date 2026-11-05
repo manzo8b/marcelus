@@ -44,8 +44,8 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       subtitle: 'Identità, natura del portfolio, limiti delle dimostrazioni e diritti sui materiali.',
       sections: [
         { heading: 'Natura del progetto', paragraphs: [
-          'MARCELUS AI LAB è attualmente un portfolio personale e un laboratorio indipendente. Documenta progetti, metodologie, casi preparati e strumenti digitali sviluppati anche con assistenza AI.',
-          'Il sito non gestisce attualmente ordini, acquisti, pagamenti o contratti di servizi. Eventuali future attività professionali saranno descritte e disciplinate separatamente prima dell’avvio.',
+          'MARCELUS è il portfolio personale di Marcelo Fernandez. Presenta lavori, servizi su progetto e un laboratorio indipendente, con strumenti ed esempi sviluppati anche con assistenza AI.',
+          'Il sito permette di conoscere il lavoro e chiedere informazioni via email o LinkedIn. Non gestisce ordini, acquisti, pagamenti o sottoscrizioni di contratti online. Disponibilità, ambito, tempi e condizioni di ogni collaborazione si concordano direttamente prima dell’avvio.',
         ] },
         { heading: 'Contenuti, esempi e limitazioni', paragraphs: [
           'I casi sintetici e le dimostrazioni preparate sono identificati come tali. Non costituiscono automaticamente risultati di clienti, prove di impiego produttivo, misure indipendenti di accuratezza o verifiche universali dal vivo.',
@@ -57,7 +57,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
         ] },
         { heading: 'Collegamenti esterni e aggiornamenti', paragraphs: [
           'I collegamenti verso repository, siti di terzi e social network conducono a servizi autonomi con condizioni proprie. I contenuti possono essere corretti o aggiornati per riflettere lo stato documentato dei progetti.',
-          'Queste informazioni descrivono il portfolio nello stato attuale; eventuali futuri servizi a pagamento richiederanno una nuova verifica dei requisiti informativi e contrattuali.',
+          'Le descrizioni dei servizi illustrano gli ambiti di collaborazione. Eventuali nuove modalità di acquisto, pagamento o raccolta dei dati richiederanno informazioni aggiornate prima dell’attivazione.',
         ] },
       ],
     },
@@ -128,8 +128,8 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       subtitle: 'Ownership, portfolio status, limitations of demonstrations and intellectual property.',
       sections: [
         { heading: 'Nature of the project', paragraphs: [
-          'MARCELUS AI LAB is currently a personal portfolio and independent lab documenting projects, methods, prepared case studies and digital tools developed with AI assistance.',
-          'The website does not currently process orders, payments, purchases or service contracts. Any future professional activity will be separately described and reviewed before it starts.',
+          'MARCELUS is the personal portfolio of Marcelo Fernandez. It presents work, project-based services and an independent lab, including tools and examples developed with AI assistance.',
+          'The website lets visitors explore the work and enquire by email or LinkedIn. It does not process orders, purchases, payments or online contract acceptance. Availability, scope, timing and terms are agreed directly before a collaboration begins.',
         ] },
         { heading: 'Content and limitations', paragraphs: [
           'Synthetic case studies and prepared demonstrations are clearly labelled. They do not automatically establish client work, production deployment, independent accuracy measurements or universal live verification.',
@@ -141,7 +141,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
         ] },
         { heading: 'External links and updates', paragraphs: [
           'Links to other sites and social platforms lead to independently operated services. Project descriptions may be updated to reflect documented evidence and development status.',
-          'If the portfolio later offers paid services, the applicable legal information will be reassessed before such services begin.',
+          'Service descriptions explain possible areas of collaboration. New purchasing, payment or data-collection features would require updated information before activation.',
         ] },
       ],
     },
@@ -212,8 +212,8 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       subtitle: 'Responsabilidad del sitio, naturaleza del portafolio, límites de las demostraciones y propiedad intelectual.',
       sections: [
         { heading: 'Naturaleza del proyecto', paragraphs: [
-          'MARCELUS AI LAB es actualmente un portafolio personal y un laboratorio independiente que documenta proyectos, métodos, casos preparados y herramientas digitales desarrolladas con asistencia de IA.',
-          'El sitio no tramita actualmente pedidos, compras, pagos ni contratos de servicios. Cualquier futura actividad profesional se describirá y revisará por separado antes de comenzar.',
+          'MARCELUS es el portafolio personal de Marcelo Fernandez. Presenta trabajos, servicios por proyecto y un laboratorio independiente, con herramientas y ejemplos desarrollados con asistencia de IA.',
+          'El sitio permite conocer el trabajo y solicitar información por email o LinkedIn. No tramita pedidos, compras, pagos ni aceptación de contratos en línea. La disponibilidad, el alcance, los plazos y las condiciones se acuerdan directamente antes de empezar.',
         ] },
         { heading: 'Contenidos y límites', paragraphs: [
           'Los casos sintéticos y las demostraciones preparadas se identifican expresamente. No acreditan por sí mismos trabajos para clientes, despliegues productivos, mediciones independientes de precisión ni verificaciones universales en tiempo real.',
@@ -225,7 +225,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
         ] },
         { heading: 'Enlaces y actualizaciones', paragraphs: [
           'Los enlaces externos conducen a sitios gestionados por otros responsables. Las descripciones pueden actualizarse de acuerdo con el estado documentado de los proyectos.',
-          'Si en el futuro se ofrecen servicios de pago, se revisará antes la información legal correspondiente.',
+          'Las descripciones de los servicios explican las áreas de colaboración. Las nuevas funciones de compra, pago o recogida de datos requerirán información actualizada antes de activarse.',
         ] },
       ],
     },
@@ -300,7 +300,7 @@ export function LegalPage({ locale, kind }: { locale: Locale; kind: LegalKind })
       <p className="eyebrow">MARCELUS AI LAB / LEGAL</p>
       <h1 className="mt-3">{copy.title}</h1>
       <p className="lead">{copy.subtitle}</p>
-      <p className="mt-5 text-sm text-[var(--muted)]">{l.updated}</p>
+      <p className="mt-5 text-sm text-[var(--muted)]">{kind==='notice'?(locale==='it'?'Ultimo aggiornamento: 5 novembre 2026':locale==='es'?'Última actualización: 5 de noviembre de 2026':'Last updated: 5 November 2026'):l.updated}</p>
       <section className="my-8 border-y border-[var(--line)] py-5 text-sm">
         <h2 className="mb-3 text-base">{l.controller}</h2>
         <p>{legalOwnerName}</p>
