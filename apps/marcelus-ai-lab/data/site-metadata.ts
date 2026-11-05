@@ -19,7 +19,7 @@ export function pageMetadata(path: string, locale: Locale = 'en', title = 'Marce
   const legalDescriptions: Record<string, readonly string[]> = {
     '/legal/':['Ownership, project-based services, content scope and material rights for the portfolio of Marcelo Fernandez.','Identità, servizi su progetto, ambito dei contenuti e diritti sui materiali del portfolio di Marcelo Fernandez.','Identidad, servicios por proyecto, alcance de los contenidos y derechos sobre los materiales del portafolio de Marcelo Fernandez.'],
     '/legal/privacy/':['How the portfolio handles technical visits and email correspondence, with information about providers, retention and privacy rights.','Come il portfolio tratta i dati tecnici di visita e le comunicazioni email: fornitori, conservazione e diritti sulla privacy.','Cómo trata el portafolio los datos técnicos de visita y los correos: proveedores, conservación y derechos de privacidad.'],
-    '/legal/cookies/':['Information about the local theme preference, cookies and external links on the portfolio.','Informazioni sulla preferenza del tema salvata nel browser, sui cookie e sui collegamenti esterni del portfolio.','Información sobre la preferencia de tema guardada en el navegador, las cookies y los enlaces externos del portafolio.'],
+    '/legal/cookies/':['Information about the light appearance, previous local preferences, cookies and external links on the portfolio.','Informazioni sull’aspetto chiaro, sulle preferenze locali precedenti, sui cookie e sui collegamenti esterni del portfolio.','Información sobre el aspecto claro, las preferencias locales anteriores, las cookies y los enlaces externos del portafolio.'],
   };
   if (legalDescriptions[path]) description=legalDescriptions[path][localeIndex];
 

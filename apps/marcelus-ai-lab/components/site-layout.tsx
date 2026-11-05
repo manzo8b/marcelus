@@ -21,7 +21,7 @@ export default function SiteLayout({ children, locale }: Readonly<{ children: Re
   const c = presentation[locale];
   const person = { '@context': 'https://schema.org', '@type': 'Person', '@id': absoluteUrl('/#marcelo-fernandez'), name: profile.name, url: absoluteUrl(localizedPath('/about/', locale)), sameAs: [profile.linkedin, 'https://github.com/manzo8b'] };
   const website={'@context':'https://schema.org','@type':'WebSite','@id':absoluteUrl('/#website'),name:'MARCELUS',alternateName:`${profile.name} — ${c.portfolio}`,url:absoluteUrl('/'),inLanguage:['en','it','es'],publisher:{'@id':person['@id']}};
-  return <html lang={locale} suppressHydrationWarning><body>
+  return <html lang={locale} data-theme="light" suppressHydrationWarning><body>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({'@context':'https://schema.org','@graph':[person,website]}).replace(/</g, '\\u003c') }} />
     <a className="skip-link" href="#main-content">{t(locale, 'Skip to content')}</a>
     <Navigation locale={locale} />

@@ -9,7 +9,7 @@ type PageCopy = { title: string; subtitle: string; sections: Section[] };
 type Labels = { updated: string; controller: string; contact: string; more: string; notice: string; privacy: string; cookies: string };
 const labels: Record<Locale, Labels> = {
   it: {
-    updated: 'Ultimo aggiornamento: 26 ottobre 2026',
+    updated: 'Ultimo aggiornamento: 5 novembre 2026',
     controller: 'Titolare del trattamento / responsabile del portfolio',
     contact: 'Contatto pubblico',
     more: 'Altre informazioni',
@@ -18,7 +18,7 @@ const labels: Record<Locale, Labels> = {
     cookies: 'Cookie e tecnologie locali',
   },
   en: {
-    updated: 'Last updated: 26 October 2026',
+    updated: 'Last updated: 5 November 2026',
     controller: 'Data controller / portfolio owner',
     contact: 'Public contact',
     more: 'Related information',
@@ -27,7 +27,7 @@ const labels: Record<Locale, Labels> = {
     cookies: 'Cookies and local technologies',
   },
   es: {
-    updated: 'Última actualización: 26 de octubre de 2026',
+    updated: 'Última actualización: 5 de noviembre de 2026',
     controller: 'Responsable del tratamiento / titular del portafolio',
     contact: 'Contacto público',
     more: 'Información relacionada',
@@ -82,7 +82,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'GitHub e Google utilizzano infrastrutture e organizzazioni internazionali: alcuni trattamenti possono avvenire anche fuori dallo Spazio economico europeo. I meccanismi e le garanzie relativi ai trasferimenti internazionali sono descritti nelle informative privacy aggiornate dei rispettivi fornitori, consultabili dai collegamenti riportati in questa pagina.',
         ] },
         { heading: 'Conservazione', paragraphs: [
-          'La preferenza grafica resta nella memoria locale del browser fino a quando viene modificata o rimossa dal visitatore. I dati tecnici registrati da GitHub seguono le condizioni e i periodi definiti dal fornitore.',
+          'Il sito attuale non legge né salva preferenze grafiche. Eventuali preferenze di versioni precedenti possono restare nei dati locali del browser fino alla loro rimozione. I dati tecnici registrati da GitHub seguono le condizioni e i periodi definiti dal fornitore.',
           'Per le email inviate volontariamente al contatto del portfolio si adotta, come regola di conservazione, la cancellazione entro 12 mesi dall’ultima comunicazione pertinente, oppure prima se il messaggio non è più necessario. I messaggi indesiderati privi di interesse vengono eliminati normalmente entro 30 giorni. Eventuali comunicazioni da conservare per un obbligo di legge o per una specifica controversia sono gestite separatamente per il solo tempo giustificato dalla relativa finalità. Il titolare verifica la casella di posta almeno ogni tre mesi per applicare questi criteri.',
         ] },
         { heading: 'Diritti degli interessati', paragraphs: [
@@ -102,9 +102,9 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       title: 'Cookie e tecnologie locali',
       subtitle: 'Informazioni sulle preferenze del browser e sui possibili strumenti di tracciamento.',
       sections: [
-        { heading: 'Preferenza del tema', paragraphs: [
-          'Il codice del portfolio salva nel localStorage del browser la chiave “marcelus-theme”, che contiene la scelta tra tema chiaro e scuro. È una preferenza funzionale, non un identificatore pubblicitario.',
-          'La preferenza rimane disponibile sul dispositivo finché non viene modificata o cancellata dal browser. È possibile cambiare tema dal controllo presente nella navigazione.',
+        { heading: 'Aspetto e dati locali', paragraphs: [
+          'Il portfolio utilizza un aspetto chiaro e non salva nuove preferenze grafiche. Le versioni precedenti potevano salvare la chiave “marcelus-theme”: il sito attuale non la legge e non la utilizza.',
+          'Eventuali preferenze precedenti possono essere eliminate dalle impostazioni dei dati del sito nel browser.',
         ] },
         { heading: 'Cookie, analytics e pubblicità', paragraphs: [
           'Nel codice attualmente esaminato non risultano strumenti pubblicitari, pixel di profilazione o integrazioni di analytics. Non è previsto un banner di consenso per tecnologie non installate.',
@@ -114,7 +114,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'L’apertura volontaria di collegamenti a GitHub, LinkedIn o altri siti conduce a servizi esterni che applicano politiche e tecnologie proprie.',
         ] },
         { heading: 'Come eliminare i dati locali', paragraphs: [
-          'Le preferenze locali possono essere modificate dalle impostazioni del sito o eliminate tramite le funzioni di cancellazione dei dati del proprio browser.',
+          'Eventuali dati locali di versioni precedenti possono essere eliminati tramite le funzioni di cancellazione dei dati del proprio browser.',
         ] },
         { heading: 'Modifiche future', paragraphs: [
           'Qualora vengano introdotti analytics non esenti, tecnologie pubblicitarie o altri strumenti che richiedano consenso, verranno aggiornate l’informativa e la gestione preventiva del consenso prima dell’attivazione.',
@@ -166,7 +166,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'GitHub and Google operate global infrastructures and organizations: some processing may take place outside the European Economic Area. The providers describe applicable international transfer mechanisms and safeguards in their current privacy notices, linked in this page.',
         ] },
         { heading: 'Retention', paragraphs: [
-          'The display preference remains in browser local storage until changed or removed. GitHub retains its security logs in accordance with the provider’s own policies.',
+          'The current site does not read or store display preferences. Preferences saved by older versions may remain in browser storage until removed. GitHub retains security logs according to its own policies.',
           'As a retention rule, ordinary emails sent voluntarily to the portfolio contact will be deleted within 12 months after the last relevant exchange, or earlier if no longer needed. Unwanted messages without a legitimate purpose will normally be deleted within 30 days. Messages that must be retained to meet a specific legal duty or for a concrete dispute will be handled separately and only for the necessary justified period. The owner reviews the mailbox at least every three months to apply this rule.',
         ] },
         { heading: 'Your rights', paragraphs: [
@@ -186,9 +186,9 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       title: 'Cookies and local technologies',
       subtitle: 'How browser preferences and optional tracking technologies are handled.',
       sections: [
-        { heading: 'Theme preference', paragraphs: [
-          'The portfolio stores the key “marcelus-theme” in browser localStorage to remember the visitor’s light or dark theme preference. It is a functional setting rather than an advertising identifier.',
-          'The value remains on the device until changed or cleared. Visitors can change the theme using the navigation control.',
+        { heading: 'Appearance and local data', paragraphs: [
+          'The portfolio uses a light appearance and does not save new display preferences. Earlier versions could store the key “marcelus-theme”; the current site does not read or use it.',
+          'Any previous display preferences can be removed through the browser’s site-data settings.',
         ] },
         { heading: 'Cookies and analytics', paragraphs: [
           'No advertising pixels, profiling tools or analytics integrations were identified in the reviewed application code. A consent banner for tools that are not installed is not planned.',
@@ -198,7 +198,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'Following links to GitHub, LinkedIn or other external websites takes visitors to services with their own policies and technologies.',
         ] },
         { heading: 'Managing storage', paragraphs: [
-          'Visitors can change the theme on the website or remove locally stored settings through their browser controls.',
+          'Visitors can remove any local data saved by earlier versions through their browser controls.',
         ] },
         { heading: 'Future changes', paragraphs: [
           'If non-exempt analytics, advertising or other consent-based tracking are introduced, this notice and prior-consent controls will be updated before activation.',
@@ -250,7 +250,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'GitHub y Google utilizan infraestructuras y organizaciones internacionales: parte del tratamiento puede producirse fuera del Espacio Económico Europeo. Los mecanismos y garantías aplicables a las transferencias internacionales se explican en las políticas de privacidad actuales de ambos proveedores, enlazadas en esta página.',
         ] },
         { heading: 'Conservación', paragraphs: [
-          'La preferencia visual permanece en el almacenamiento local del navegador hasta modificarse o borrarse. Los registros de seguridad de GitHub siguen las políticas de ese proveedor.',
+          'El sitio actual no lee ni guarda preferencias visuales. Las preferencias de versiones anteriores pueden permanecer en el navegador hasta que se eliminen. Los registros de seguridad de GitHub siguen las políticas de ese proveedor.',
           'Como criterio de conservación, los correos enviados voluntariamente al contacto del portafolio se eliminarán dentro de los 12 meses siguientes a la última comunicación pertinente, o antes si dejan de ser necesarios. Los mensajes no deseados sin finalidad legítima se eliminarán normalmente dentro de 30 días. Los mensajes que deban conservarse por una obligación legal específica o una controversia concreta se gestionarán por separado únicamente durante el plazo justificado. El titular revisa el buzón al menos cada tres meses para aplicar estos criterios.',
         ] },
         { heading: 'Derechos de las personas', paragraphs: [
@@ -270,9 +270,9 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
       title: 'Cookies y tecnologías locales',
       subtitle: 'Preferencias del navegador y posibles tecnologías de seguimiento.',
       sections: [
-        { heading: 'Preferencia de apariencia', paragraphs: [
-          'El portafolio guarda la clave “marcelus-theme” en localStorage para recordar el tema claro u oscuro. Es una preferencia funcional, no un identificador publicitario.',
-          'El valor permanece en el dispositivo hasta su modificación o eliminación. El tema puede cambiarse desde la navegación.',
+        { heading: 'Apariencia y datos locales', paragraphs: [
+          'El portafolio utiliza un aspecto claro y no guarda nuevas preferencias visuales. Las versiones anteriores podían guardar la clave “marcelus-theme”; el sitio actual no la lee ni la utiliza.',
+          'Las preferencias anteriores pueden eliminarse desde los ajustes de datos del sitio en el navegador.',
         ] },
         { heading: 'Cookies y analítica', paragraphs: [
           'No se han identificado píxeles publicitarios, sistemas de perfilado ni integraciones de analítica en el código de la aplicación revisada. No se prevé un banner para herramientas que no estén instaladas.',
@@ -282,7 +282,7 @@ const documents: Record<Locale, Record<LegalKind, PageCopy>> = {
           'Los enlaces a GitHub, LinkedIn y otros sitios conducen a servicios que aplican sus propias políticas y tecnologías.',
         ] },
         { heading: 'Gestión del almacenamiento', paragraphs: [
-          'Es posible cambiar el tema en el sitio o eliminar los datos locales desde la configuración del navegador.',
+          'Los datos locales guardados por versiones anteriores pueden eliminarse desde la configuración del navegador.',
         ] },
         { heading: 'Cambios futuros', paragraphs: [
           'Antes de añadir analítica no exenta, publicidad o seguimiento sujeto a consentimiento, se actualizarán esta política y los controles de consentimiento previo.',

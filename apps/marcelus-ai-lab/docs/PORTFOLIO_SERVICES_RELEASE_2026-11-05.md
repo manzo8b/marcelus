@@ -14,7 +14,7 @@ The legal notice's description of the website is aligned with enquiries and proj
 
 ## Presentation and search
 
-Service cards use restrained blue, violet, teal and warm accents, icon surfaces and small hover movements. The whole card is one accessible link. Reduced-motion behavior and light/dark themes remain supported.
+Service cards use restrained blue, violet, teal and warm accents, icon surfaces and small hover movements. The whole card is one accessible link. Reduced-motion behavior is retained. At the owner’s request, the final release uses light surfaces only, including pastel blue action buttons. The theme switch is removed; stored dark preferences are ignored without deleting browser data. Privacy/cookie descriptions reflect that change.
 
 Metadata describes the actual page in each language, including services, contact, projects and legal documents. Canonicals and language alternates retain the `/marcelus/` base path. Visible breadcrumbs and matching BreadcrumbList data are added to services, contact and project details. Person and WebSite data identify the portfolio without claiming an organization, ratings, prices or search functionality.
 
@@ -36,7 +36,8 @@ References:
 - All generated heading elements have no terminal full stop
 - All 87 generated JSON-LD script blocks parse
 - 36 browser route/viewport checks at 320, 390 and 1280 px show no horizontal overflow, missing H1, heading full stops or failed loaded images
-- Mobile menu opens and closes on navigation; contact language switch and dark theme verified
+- A further 24 checks on the final light-only layout confirm no overflow or large dark surfaces in the sampled pages, including a reload after a previously selected dark preference
+- Mobile menu opens and closes on navigation; contact language switch verified; final light-only behavior checked
 - Mailto recipient, subject and real line breaks verified without sending a message
 - Approved public CV SHA-256 remains `c737892d5aeec7ffc479a72769c750e235899a1343994145ac7aa725b3bc2189`
 

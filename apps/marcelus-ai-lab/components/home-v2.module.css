@@ -11,7 +11,7 @@
 .heroActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:29px}
 .primaryAction,.secondaryAction,.contactButton,.contactEmail,.villaContactButton{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:48px;padding:13px 22px;border-radius:999px;font-size:13px;font-weight:650;line-height:1.4;text-align:center;border:1px solid transparent;transition:background .2s,transform .2s,border-color .2s}
 .primaryAction,.contactButton,.villaContactButton{background:var(--strong);color:var(--inverse)}
-.primaryAction:hover,.contactButton:hover,.villaContactButton:hover{background:var(--lab-blue);color:var(--inverse);transform:translateY(-2px)}
+.primaryAction:hover,.contactButton:hover,.villaContactButton:hover{background:var(--action-hover);color:var(--action-ink);transform:translateY(-2px)}
 .secondaryAction,.contactEmail{border-color:var(--line);color:var(--ink);background:var(--canvas)}
 .secondaryAction:hover,.contactEmail:hover{border-color:var(--ink);transform:translateY(-2px)}
 .heroNote{display:flex;gap:7px;align-items:center;font-size:11px;color:var(--muted);margin-top:23px}
