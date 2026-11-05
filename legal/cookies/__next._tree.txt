@@ -1,7 +1,7 @@
 :HL["/marcelus/_next/static/chunks/3xwtq4xd6mejn.css","style"]
-:HL["/marcelus/_next/static/chunks/1sd210e9tm6eb.css","style"]
+:HL["/marcelus/_next/static/chunks/06kq6g6vncmrd.css","style"]
 4:[["children",{"s":"__PAGE__","h":160}]]
 3:[["children",{"s":"cookies","h":96,"c":"$Q4"}]]
 2:[["children",{"s":"legal","h":64,"c":"$Q3"}]]
 1:[["children",{"s":"(english)","h":48,"c":"$Q2"}]]
-0:{"b":"jzx_LYg3XJvjC7UqwnDe8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"sfIFehmJ8lEyZgU2vNxRh","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

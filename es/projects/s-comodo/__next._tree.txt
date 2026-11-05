@@ -1,7 +1,7 @@
 :HL["/marcelus/_next/static/chunks/3xwtq4xd6mejn.css","style"]
-:HL["/marcelus/_next/static/chunks/1sd210e9tm6eb.css","style"]
+:HL["/marcelus/_next/static/chunks/06kq6g6vncmrd.css","style"]
 :HL["/marcelus/_next/static/chunks/1iz0uze8c0rui.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"segments","t":"oc","k":"projects/s-comodo","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"es","s":["about","cases","contact","lab","legal","library","projects","recruiter","resources","services"]},"h":196720,"c":"$Q2"}]]
-0:{"b":"jzx_LYg3XJvjC7UqwnDe8","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"sfIFehmJ8lEyZgU2vNxRh","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
