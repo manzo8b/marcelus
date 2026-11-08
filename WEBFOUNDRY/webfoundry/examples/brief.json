@@ -1,0 +1,15 @@
+{
+  "project_name": "MARCELUS WebFoundry Demo",
+  "language": "it",
+  "theme": "ocean",
+  "eyebrow": "PROTOTIPO OPEN · MARCELUS AI LAB",
+  "headline": "Un sito chiaro. Un processo verificabile.",
+  "description": "Un esempio originale di landing page generata da un brief strutturato, con HTML semantico, design responsive e controlli ripetibili. È una dimostrazione tecnica, non un servizio commerciale attivo.",
+  "features": [
+    {"title": "Dal brief al codice", "description": "Contenuti confermati e gerarchia comprensibile prima degli effetti grafici."},
+    {"title": "Accessibilità come requisito", "description": "Focus visibile, struttura semantica e riduzione del movimento nell'interfaccia di partenza."},
+    {"title": "Prove ripetibili", "description": "Uno script Python controlla requisiti statici e restituisce un rapporto con i suoi limiti."}
+  ],
+  "primary_cta": {"label": "Esplora il codice", "href": "https://github.com/manzo8b/marcelus"},
+  "secondary_cta": {"label": "Come funziona", "href": "#approach"}
+}

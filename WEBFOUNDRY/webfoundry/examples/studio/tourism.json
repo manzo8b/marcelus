@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2",
+  "product": "MANZO AI Studio",
+  "generator": "deterministic_browser_blueprint",
+  "project": {
+    "name": "Beyond Coast",
+    "sector": "tourism",
+    "style": "cinematic",
+    "goal": "present"
+  },
+  "website": {
+    "headline": "Find your next perspective.",
+    "subheadline": "Luoghi reali. Esperienze memorabili.",
+    "pages": [
+      "Home",
+      "Luoghi",
+      "Itinerari",
+      "Storie",
+      "Contatti"
+    ],
+    "recommended_cta": "Esplora la destinazione"
+  },
+  "quality": {
+    "human_review_required": true,
+    "checks_to_perform": [
+      "Verifica dei contenuti",
+      "Prova smartphone"
+    ],
+    "ai_model_used": false,
+    "website_generated": false,
+    "production_ready": false
+  }
+}
