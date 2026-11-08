@@ -1,0 +1,55 @@
+{
+  "registry_version": "1.0.0",
+  "architectural_authority": "marcelus-webfoundry",
+  "roles": {
+    "architecture": "marcelus-webfoundry",
+    "generation": "marcelus-webfoundry",
+    "schema_validation": "marcelus-webfoundry",
+    "structural_audit": "marcelus-webfoundry",
+    "deployment_approval": "human-owner"
+  },
+  "modules": [
+    {
+      "id": "design-taste-frontend",
+      "display_name": "tasteskill v2 / design-taste-frontend",
+      "stage": "art-direction",
+      "priority": 10,
+      "source": "Previously supplied SKILL (2).md",
+      "capabilities": ["visual direction", "non-generic concepts", "layout composition", "screenshot review"],
+      "contract": "Advisory art direction only; preserve approved client brand, assets and factual brief.",
+      "execution": "guidance-only",
+      "tooling_status": "External scripts and curated library not included"
+    },
+    {
+      "id": "impeccable",
+      "display_name": "impeccable v4.8",
+      "stage": "ui-review",
+      "priority": 20,
+      "source": "Previously supplied SKILL (1).md (duplicate SKILL impeccable).md",
+      "capabilities": ["visual hierarchy", "design systems", "responsive UX", "accessibility review"],
+      "contract": "Advisory UI review only; its external CLI/binary is not bundled or executed.",
+      "execution": "guidance-only",
+      "tooling_status": "External CLI and playbooks not included"
+    },
+    {
+      "id": "apple-design",
+      "display_name": "Apple Design / fluid interface principles",
+      "stage": "interaction-motion",
+      "priority": 30,
+      "source": "Previously supplied SKILL.md (duplicate SKILL apple-design.md)",
+      "capabilities": ["physical motion", "interruptible gestures", "translucent depth", "reduced-motion alternatives"],
+      "contract": "Interaction guidance only; do not imitate Apple identity, add paid dependencies or force animation.",
+      "execution": "guidance-only",
+      "tooling_status": "Principles available without external runtime"
+    }
+  ],
+  "non_overridable_constraints": [
+    "WebFoundry remains the only generation and validation engine",
+    "The original input blueprint is immutable and must pass strict schema validation",
+    "Approved client brand, MANZO visual concept and actual asset ownership prevail over generic design suggestions",
+    "No fabricated facts, analytics, customers, reviews, legal or regulatory promises",
+    "No external code downloads, automatic package installation, hidden API requests or privileged changes",
+    "Generated sites remain noindex and unpublished until explicit human approval",
+    "All source tests, accessibility caveats and provenance must remain visible"
+  ]
+}

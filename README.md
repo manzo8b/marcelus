@@ -1,4 +1,11 @@
 # MARCELUS AI LAB
+
+## Featured tool: MARCELUS WebFoundry
+
+**[Explore WebFoundry v0.3 — portable Agent Skill + Python](WEBFOUNDRY/README.md)** · [SKILL.md](WEBFOUNDRY/webfoundry/SKILL.md) · [5 sector blueprints](WEBFOUNDRY/webfoundry/examples/studio/) · [Tests](WEBFOUNDRY/webfoundry/tests/)
+
+Generate **five linked pages per project**, inspect every route and reproduce the audit locally, without a paid API. The three external design skill families are *advisory only*; WebFoundry owns the architecture and validation. **Technical demo, not hosted AI SaaS or a WCAG certification.** See the [release notes](WEBFOUNDRY/RELEASE_NOTES_v0.3.md). If useful, star this repository to follow the work.
+
 ### Marcelo Fernandez · AI Evaluation · Instruction Design · Training Workflows
 
 **[Explore the portfolio](https://manzo8b.github.io/marcelus/it/)** · **[Recruiter overview](https://manzo8b.github.io/marcelus/it/recruiter/)** · [English](https://manzo8b.github.io/marcelus/) · [Español](https://manzo8b.github.io/marcelus/es/)

@@ -1,0 +1,32 @@
+name: WebFoundry Python tests
+
+on:
+  push:
+    paths:
+      - 'WEBFOUNDRY/**'
+      - '.github/workflows/webfoundry-qa.yml'
+  pull_request:
+    paths:
+      - 'WEBFOUNDRY/**'
+      - '.github/workflows/webfoundry-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run WebFoundry tests (no network dependency)
+        working-directory: WEBFOUNDRY/webfoundry
+        run: python -m unittest discover -s tests -v
+      - name: Generate and audit the Education demo
+        working-directory: WEBFOUNDRY/webfoundry
+        run: |
+          python scripts/multipage.py new --blueprint examples/studio/education.json --out ../ci-demo
+          python scripts/multipage.py audit --site ../ci-demo --report ../ci-audit.json

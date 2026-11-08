@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2",
+  "product": "MANZO AI Studio",
+  "generator": "deterministic_browser_blueprint",
+  "project": {
+    "name": "Atelier Hospitality",
+    "sector": "hospitality",
+    "style": "cinematic",
+    "goal": "present"
+  },
+  "website": {
+    "headline": "Every stay, unforgettable.",
+    "subheadline": "L’ospitalità inizia con una storia.",
+    "pages": [
+      "Home",
+      "Esperienze",
+      "Servizi",
+      "Galleria",
+      "Contatti"
+    ],
+    "recommended_cta": "Scopri i servizi"
+  },
+  "quality": {
+    "human_review_required": true,
+    "checks_to_perform": [
+      "Verifica dei contenuti",
+      "Prova smartphone"
+    ],
+    "ai_model_used": false,
+    "website_generated": false,
+    "production_ready": false
+  }
+}

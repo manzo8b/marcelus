@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  <title>{{TITLE}}</title>
+  {{CANONICAL}}
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-theme="{{THEME}}">
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" aria-label="{{PROJECT_NAME}} — inizio pagina">
+        <span class="brand-mark" aria-hidden="true">✳</span><span>{{PROJECT_NAME}}</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Apri il menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Navigazione principale">
+        <a href="#features">Punti di forza</a>
+        <a href="#approach">Metodo</a>
+        {{NAV_CONTACT}}
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="signal" aria-hidden="true"></span>{{EYEBROW}}</p>
+          <h1 id="hero-title">{{HEADLINE}}</h1>
+          <p class="lede">{{DESCRIPTION}}</p>
+          <div class="hero-actions">{{CTA_BUTTONS}}</div>
+          <p class="hero-note"><span aria-hidden="true">◈</span> Progettato per essere chiaro, non per impressionare con numeri inventati.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="visual-card card-top"><span class="visual-dot"></span><span>BRIEF</span><strong>01</strong></div>
+          <div class="visual-core"><span>DESIGN</span><strong>+</strong><span>EVIDENCE</span></div>
+          <div class="visual-card card-bottom"><span class="visual-dot"></span><span>REVIEW</span><strong>03</strong></div>
+          <div class="visual-corner">M / WF</div>
+        </div>
+      </div>
+    </section>
+    <section class="section features-section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading"><p class="kicker">PERCHÉ FUNZIONA</p><h2 id="features-title">Un approccio costruito sui fondamentali.</h2><p>Semplice da esplorare, abbastanza solido da essere esaminato.</p></div>
+        <div class="feature-grid">{{FEATURE_CARDS}}</div>
+      </div>
+    </section>
+    <section class="section process-section" id="approach" aria-labelledby="approach-title">
+      <div class="container process-grid">
+        <div><p class="kicker">PROCESSO</p><h2 id="approach-title">Dal primo requisito al risultato leggibile.</h2><p class="process-copy">Il design da solo non dimostra la qualità. Ogni fase produce un risultato che può essere controllato e migliorato.</p></div>
+        <ol class="steps">
+          <li><span class="step-number">01</span><div><h3>Definire</h3><p>Pubblico, obiettivo, messaggio e dati confermati.</p></div></li>
+          <li><span class="step-number">02</span><div><h3>Realizzare</h3><p>Layout responsive e interfaccia semantica.</p></div></li>
+          <li><span class="step-number">03</span><div><h3>Verificare</h3><p>Controlli automatici espliciti e test manuali.</p></div></li>
+        </ol>
+      </div>
+    </section>
+    {{CONTACT_SECTION}}
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>{{PROJECT_NAME}}</span><span>Un prototipo statico senza cookie, analytics o tracking incorporato.</span><a href="#top">Torna su ↑</a></div></footer>
+</body>
+</html>

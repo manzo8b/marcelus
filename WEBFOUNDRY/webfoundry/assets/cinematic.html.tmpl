@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  <title>{{TITLE}}</title>
+  {{CANONICAL}}
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-theme="{{THEME}}" data-sector="{{SECTOR}}" data-direction="{{DIRECTION}}">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div class="ambience ambience-a" aria-hidden="true"></div><div class="ambience ambience-b" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="{{PROJECT_NAME}} — homepage"><span class="brand-glyph" aria-hidden="true">◇</span><span>{{PROJECT_NAME}}</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Apri navigazione">☰</button>
+      <nav class="nav-links" id="site-navigation" aria-label="Navigazione principale"><a href="#features">Esperienza</a><a href="#approach">Metodo</a>{{NAV_CONTACT}}</nav>
+      <span class="header-badge">DEMO · NON PUBBLICATA</span>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dash"></span>{{EYEBROW}}</p>
+        <h1 id="hero-title">{{HEADLINE}}</h1>
+        <p class="hero-lead">{{DESCRIPTION}}</p>
+        <div class="hero-actions">{{CTA_BUTTONS}}</div>
+        <div class="hero-tags" aria-label="Caratteristiche"><span>✦ Creative direction</span><span>◎ Responsive design</span><span>◇ Human review</span></div>
+      </div>
+      <div class="hero-stage" aria-label="Visuale decorativa con nucleo geometrico e anelli luminosi">
+        <div class="stage-halo" aria-hidden="true"></div>
+        <div class="orbit orbit-back" aria-hidden="true"></div>
+        <div class="tech-core" aria-hidden="true"><div class="core-face"><span class="core-sign">◇</span><span class="core-small">DIGITAL EXPERIENCE</span></div></div>
+        <div class="orbit orbit-front" aria-hidden="true"></div>
+        <div class="stage-platform" aria-hidden="true"></div>
+        <div class="satellite satellite-a" aria-hidden="true">01 <strong>DESIGN</strong><span>ACTIVE</span></div>
+        <div class="satellite satellite-b" aria-hidden="true">02 <strong>BUILD</strong><span>REVIEW</span></div>
+        <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Metti in pausa le animazioni">Ⅱ <span>Pausa effetti</span></button>
+      </div>
+    </section>
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container"><div class="section-heading"><p class="eyebrow"><span class="dash"></span>THE EXPERIENCE</p><h2 id="features-title">Un'identità che lascia il segno.</h2><p>Architettura visiva e contenuti da completare con dati, fotografie e autorizzazioni reali.</p></div><div class="feature-grid">{{FEATURE_CARDS}}</div></div>
+    </section>
+    <section class="section process" id="approach" aria-labelledby="approach-title">
+      <div class="container process-grid"><div><p class="eyebrow"><span class="dash"></span>OUR METHOD</p><h2 id="approach-title">L'idea prende forma. La verifica le dà valore.</h2><p>Questa è una pagina dimostrativa generata da un blueprint strutturato. Le altre sezioni indicate sono proposte, non pagine già pubblicate.</p></div><ol class="steps"><li><b>01</b><span><strong>Understand</strong><small>Obiettivo, pubblico e contenuti.</small></span></li><li><b>02</b><span><strong>Design</strong><small>Un'interfaccia originale e responsive.</small></span></li><li><b>03</b><span><strong>Validate</strong><small>Test statici e controlli umani.</small></span></li></ol></div>
+    </section>
+    {{CONTACT_SECTION}}
+  </main>
+  <footer class="footer container"><strong>{{PROJECT_NAME}}</strong><span>Prototipo locale senza backend, tracciamento o generazione AI remota.</span><a href="#top">Torna su ↑</a></footer>
+</body>
+</html>

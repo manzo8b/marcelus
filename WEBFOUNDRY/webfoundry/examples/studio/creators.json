@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2",
+  "product": "MANZO AI Studio",
+  "generator": "deterministic_browser_blueprint",
+  "project": {
+    "name": "Sonic Motion",
+    "sector": "creators",
+    "style": "cinematic",
+    "goal": "present"
+  },
+  "website": {
+    "headline": "Create something they feel.",
+    "subheadline": "Identità, suono, immaginazione.",
+    "pages": [
+      "Home",
+      "Progetti",
+      "Catalogo",
+      "Media kit",
+      "Contatti"
+    ],
+    "recommended_cta": "Scopri il catalogo"
+  },
+  "quality": {
+    "human_review_required": true,
+    "checks_to_perform": [
+      "Verifica dei contenuti",
+      "Prova smartphone"
+    ],
+    "ai_model_used": false,
+    "website_generated": false,
+    "production_ready": false
+  }
+}

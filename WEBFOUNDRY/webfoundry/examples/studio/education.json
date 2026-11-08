@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2",
+  "product": "MANZO AI Studio",
+  "generator": "deterministic_browser_blueprint",
+  "project": {
+    "name": "Nova Academy",
+    "sector": "education",
+    "style": "cinematic",
+    "goal": "present"
+  },
+  "website": {
+    "headline": "Make knowledge extraordinary.",
+    "subheadline": "La conoscenza diventa esperienza.",
+    "pages": [
+      "Home",
+      "Percorsi",
+      "Metodo",
+      "Risorse",
+      "Contatti"
+    ],
+    "recommended_cta": "Scopri i percorsi"
+  },
+  "quality": {
+    "human_review_required": true,
+    "checks_to_perform": [
+      "Verifica dei contenuti",
+      "Prova smartphone"
+    ],
+    "ai_model_used": false,
+    "website_generated": false,
+    "production_ready": false
+  }
+}
