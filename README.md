@@ -17,9 +17,13 @@ I design and document practical AI-assisted workflows, drawing on professional e
 
 ### More portfolio work
 
-- **[S-COMODO](https://manzo8b.github.io/s-comodo/)** — independent editorial website with published, reviewed articles, source references and a transparent corrections policy.
-- **[Villa All'Ombra dei Pitosfori](https://www.villapitosfori.com/)** — a website-creation project for a holiday villa in Salento. The live website is linked; no traffic or booking claims are made.
-- **OIKO** and **HACCP SMART** — **work in progress**, not finished or publicly certified products.
+- **[MANZO AI](https://manzo8b.github.io/manzo-ai/it/)** — public trilingual AI education website with examples, technical exercises and critical-thinking materials; [repository](https://github.com/manzo8b/manzo-ai).
+- **[OIKO](https://manzo8b.github.io/oiko/)** — public free, browser-local household expense tool; the separate Family service remains a private beta, not an open commercial service. [Repository](https://github.com/manzo8b/oiko).
+- **[S-COMODO](https://manzo8b.github.io/s-comodo/)** — independent editorial website with source references and an AI-use transparency policy.
+- **[TORREMOLINOS](https://manzo8b.github.io/Torremolinos/)** — independent multilingual travel guide with editorial resources and information that may require source/date verification.
+- **[Lune_X](https://manzo8b.github.io/Lune_X/)** — independent electronic music project with human creative direction and AI-assisted production, listed separately from AI evaluation.
+- **[Villa All'Ombra dei Pitosfori](https://www.villapitosfori.com/)** — website-creation project for a holiday villa in Salento; no traffic or booking claims are made.
+- **HACCP SMART** — work in progress, not a finished or certified product.
 - **[Free resources](apps/marcelus-ai-lab/public/resources/)** — nine downloadable, editable files: AI review checklist, clear-instruction worksheet and 60-minute lesson plan, each in EN / IT / ES. The website download page is published separately with the static site release.
 
 ### Two distinct VERUM workflows
@@ -27,9 +31,9 @@ I design and document practical AI-assisted workflows, drawing on professional e
 - **VERUM fact-checking** examines the evidentiary basis of claims and content. [Project documentation](FACT_CHECK_INDIPENDENTE/README.md).
 - **VERUM Output Reviewer** is a separate, reference-based reviewer for checking a candidate AI output against supplied instructions and reference material. It does **not** independently browse or establish external facts. The marketplace listing and package documentation should be evaluated on their own terms; do not conflate it with VERUM fact-checking.
 
-### RISTO-LAB: public work vs. private Instructor Hub
+### RISTO-LAB: public platform and content boundaries
 
-The [public RISTO-LAB documentation](RISTO_LAB/README.md) describes historical prompt-based hospitality training and operations work. A **separate local Instructor Hub** is in development and user testing for lesson planning, approved materials, classroom projection and attendance. It is **not publicly deployed**, and private teaching materials and participant records are not hosted in this repository.
+The [RISTO-LAB public project](https://github.com/manzo8b/risto-lab) now provides a [GitHub Pages instructor website](https://manzo8b.github.io/risto-lab/) for teaching resources and classroom preparation. Its published tools store draft lesson data in the user's browser; publishing does not imply an account system or confidential cloud storage. Human usability and instructional acceptance checks remain in progress. Historical prompt-based cases stay documented in [RISTO_LAB](RISTO_LAB/README.md). Private teaching records and participant data are not hosted in this repository.
 
 ## Evidence, method and limitations
 
