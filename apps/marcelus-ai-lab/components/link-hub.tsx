@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, BriefcaseBusiness, GraduationCap, House, Github, Linkedin, MapPinned, Music2, Newspaper, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, BriefcaseBusiness, GraduationCap, House, GitBranch, MapPinned, Music2, Newspaper, Sparkles } from 'lucide-react';
 import { type Locale, localizedPath } from '@/data/i18n';
 import { assetUrl } from '@/data/portfolio';
 import s from './link-hub.module.css';
@@ -14,9 +14,9 @@ const projects: Project[] = [
   { name: 'Villa All’Ombra dei Pitosfori', url: 'https://www.villapitosfori.com/', icon: House, accent: 'sage', category: { it: 'Ospitalità · Salento', en: 'Hospitality · Salento', es: 'Hospitalidad · Salento' }, description: { it: 'Il sito ufficiale della villa: un’esperienza di ospitalità nel Salento', en: 'The villa’s official website: a hospitality experience in Salento', es: 'La web oficial de la villa: una experiencia de hospitalidad en Salento' } },
 ];
 const profiles = [
-  { name: 'GitHub', url: 'https://github.com/manzo8b', icon: Github, description: { it: 'Codice e repository', en: 'Code and repositories', es: 'Código y repositorios' } },
+  { name: 'GitHub', url: 'https://github.com/manzo8b', icon: GitBranch, description: { it: 'Codice e repository', en: 'Code and repositories', es: 'Código y repositorios' } },
   { name: 'Agensi', url: 'https://www.agensi.io/creators/marcelo-javier-fernandez-caballero', icon: Sparkles, description: { it: 'Profilo creator · Skill AI', en: 'Creator profile · AI skills', es: 'Perfil de creador · Skills IA' } },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/marcelo-fernandez-cab/', icon: Linkedin, description: { it: 'Profilo professionale', en: 'Professional profile', es: 'Perfil profesional' } },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/marcelo-fernandez-cab/', icon: BriefcaseBusiness, description: { it: 'Profilo professionale', en: 'Professional profile', es: 'Perfil profesional' } },
 ];
 const copy = {
   it: { eyebrow: 'MARCELUS / DIGITAL ECOSYSTEM', titleA: 'Tutto ciò che creo.', titleB: 'In un solo posto.', intro: 'Tecnologia, formazione, idee, musica e ospitalità. Un unico punto di accesso ai progetti e ai profili professionali di Marcelo Fernandez.', scroll: 'Esplora i collegamenti', featured: 'PROGETTO IN EVIDENZA', featuredTag: 'AI · WEB · STRUMENTI DIGITALI', featuredText: 'MANZO AI', featuredDescription: 'Il laboratorio digitale per costruire, imparare e sperimentare nuove possibilità con l’intelligenza artificiale.', visit: 'Visita il sito', projectsLabel: '01 / PROGETTI', projectsTitle: 'Esplora l’ecosistema', projectsIntro: 'Ogni progetto ha una propria identità. Scopri quello che ti interessa.', profilesLabel: '02 / PROFILI', profilesTitle: 'Rimaniamo connessi', profilesIntro: 'Repository, Skill e percorso professionale', back: 'Torna al portfolio', close: 'Più di un elenco di link', closeText: 'Questo spazio è parte di MARCELUS: un’identità, progetti distinti e un modo concreto di trasformare idee in strumenti.', external: 'Si apre in una nuova scheda' },
