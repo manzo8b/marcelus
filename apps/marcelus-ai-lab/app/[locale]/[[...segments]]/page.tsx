@@ -16,9 +16,10 @@ import { caseStudies, projects, profile } from '@/data/portfolio';
 import { type Locale, t } from '@/data/i18n';
 import { pageMetadata } from '@/data/site-metadata';
 import { ServicesPage, ContactPage } from '@/components/services';
+import { LinkHub } from '@/components/link-hub';
 import { presentation } from '@/data/presentation';
 
-const routes = ['', 'services', 'contact', 'projects', 'projects/s-comodo', 'projects/villa-pitosfori', 'resources', ...projects.map(item => `projects/${item.id}`), 'lab', 'library', 'cases', ...caseStudies.map(item => `cases/${item.id}`), 'about', 'recruiter', 'legal', 'legal/privacy', 'legal/cookies'];
+const routes = ['', 'links', 'services', 'contact', 'projects', 'projects/s-comodo', 'projects/villa-pitosfori', 'resources', ...projects.map(item => `projects/${item.id}`), 'lab', 'library', 'cases', ...caseStudies.map(item => `cases/${item.id}`), 'about', 'recruiter', 'legal', 'legal/privacy', 'legal/cookies'];
 export const dynamicParams = false;
 export function generateStaticParams() { return ['it', 'es'].flatMap(locale => routes.map(route => ({ locale, segments: route ? route.split('/') : [] }))); }
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
@@ -34,6 +35,9 @@ export async function generateMetadata({ params }: Props) {
     return pageMetadata(route?`/${route}/`:'/',locale,title,description);
   }
   if (route === 'projects') return pageMetadata('/projects/',locale,`${presentation[locale].nav.projects} — ${profile.name}`,locale==='it'?'Siti web, istruzioni AI e formazione pratica: esplora lavori pubblicati e progetti documentati di Marcelo Fernandez.':'Sitios web, instrucciones de IA y formación práctica: explora trabajos publicados y proyectos documentados de Marcelo Fernandez.');
+  if (route === 'links') {
+    return pageMetadata('/links/', locale, locale === 'it' ? 'Tutti i progetti e profili — MARCELUS' : 'Todos los proyectos y perfiles — MARCELUS', locale === 'it' ? 'Tutti i progetti di Marcelo Fernandez: MANZO AI, RISTO-LAB, S-COMODO, Lune_X, Torremolinos, Villa All’Ombra dei Pitosfori, GitHub, Agensi e LinkedIn.' : 'Todos los proyectos de Marcelo Fernandez: MANZO AI, RISTO-LAB, S-COMODO, Lune_X, Torremolinos, Villa All’Ombra dei Pitosfori, GitHub, Agensi y LinkedIn.');
+  }
   if (route === 'resources') {
     return pageMetadata('/resources/', locale, locale === 'it' ? 'Risorse gratuite' : 'Recursos gratuitos', locale === 'it' ? 'Checklist e modelli gratuiti per risposte AI, istruzioni più chiare e lezioni. Download diretto senza registrazione.' : 'Plantillas gratuitas para revisar respuestas de IA, escribir instrucciones y planificar clases. Descarga directa sin registro.');
   }
@@ -75,6 +79,7 @@ export default async function LocalizedPage({ params }: Props) {
   if (route === 'projects/s-comodo') return <SComodoOverview locale={locale} />;
   if (route === 'projects/villa-pitosfori') return <VillaPitosforiOverview locale={locale} />;
   if (route === 'resources') return <FreeResources locale={locale} />;
+  if (route === 'links') return <LinkHub locale={locale} />;
   if (route === 'cases') return <Cases params={pageParams} />;
   if (route === 'about') return <About params={pageParams} />;
   if (route === 'recruiter') return <Recruiter params={pageParams} />;
