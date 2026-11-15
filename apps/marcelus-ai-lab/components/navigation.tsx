@@ -30,6 +30,7 @@ export function Navigation({ locale }: { locale: Locale }) {
       <Link href={localizedPath('/', locale)} className="brand" aria-label="Marcelus — Marcelo Fernandez"><img className="brand-symbol" src={assetUrl('/media/manzo-mark.svg')} alt="" aria-hidden="true" width={35} height={34} /><span>MARCELUS <span className="brand-detail">{profile.name}</span></span></Link>
       <nav id="main-navigation" aria-label={t(locale, 'Main navigation')} className={`main-nav ${open ? 'is-open' : ''}`}>
         {links.map(([href, label]) => <Link key={href} href={localizedPath(href, locale)} aria-current={active(href) ? 'page' : undefined} onClick={() => setOpen(false)}>{c.nav[label]}</Link>)}
+        <Link className="nav-link-hub" href={localizedPath('/links/', locale)} aria-current={active('/links/') ? 'page' : undefined} onClick={() => setOpen(false)}>Link Hub</Link>
         <Link className="nav-enquiry" href={localizedPath('/contact/',locale)} aria-current={active('/contact/')?'page':undefined} onClick={()=>setOpen(false)}>{c.nav.contact}</Link>
       </nav>
       <div className="header-tools">
